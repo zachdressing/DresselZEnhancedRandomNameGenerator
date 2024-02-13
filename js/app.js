@@ -48,15 +48,14 @@ const genGroups = (array) => {
     }
     else {
         modBody.innerHTML = '';
-        //It generates an array for each of the groups then it grabs a value from 
+        let newNameArray = nameArray;
         for (let i = 0; i < groupNum.value; i++) {
             let groupnumber = i + 1;
             let group = [];
             for (let x = 0; x < groupSize.value; x++) {
-                let nameList = nameArray;
                 console.log()
-                let gRand = Math.floor(Math.random() * nameList.length);
-                let x = nameList.splice(gRand, 1);
+                let gRand = Math.floor(Math.random() * newNameArray.length);
+                let x = newNameArray.splice(gRand, 1);
                 let number = x[0]
                 group.push(number)
 
